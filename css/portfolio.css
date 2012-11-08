@@ -1,0 +1,44 @@
+#kitchens_description, #bathrooms_description, #exterior_description, #restaurants_description, #other_description {
+	display: none;
+}
+
+#kitchens_description.active, #bathrooms_description.active, #exterior_description.active, #restaurants_description.active, #other_description.active {
+	display: block;
+}
+
+.lb_thumb {
+	width: 216px;
+	height: 162px;
+	float: left;
+	margin: 40px 35px 0px 0px;  /*This should be 40 40 0 0 , but firefox has a weird padding issue with images */
+	border: 1px solid #D4D4D4;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff',endColorstr='#fff2f2f2',GradientType=0);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+.lb_big {
+	height: 700px;
+}
+
+.photo_gallery {
+	width: 775px;
+	height: 482px;
+	padding-top: 18px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.references {
+	font-size: 12px !important;
+	padding-bottom: 12px;
+}
+
+.references a {
+	color: #F5F5F5;
+	text-decoration: none;
+}

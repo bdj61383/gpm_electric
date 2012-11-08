@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPM Electric</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/services.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
+    <link href="../css/contact.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
+    <!-- The style below is to handle FireFox's weird padding behavior. -->
+    <style type="text/css">
+      @-moz-document url-prefix() {
+        iframe {
+          border: 1px solid #D4D4D4;
+          border-radius: 4px 4px 4px 4px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+          height: 360px;
+          position: relative;
+          right: -696px;
+          top: 78px;
+          width: 392px;
+          z-index: 100;
+        }
+        .contact_hero {
+          margin-top: -367px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <!-- <h1 class="main_title">GPM Electric</h1> -->
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="../">GPM Electric</a>
+          <ul class="nav">
+            <li><a href="../about">About</a></li>
+            <li><a href="../services">Services</a></li>
+            <li><a href="../portfolio">Portfolio</a></li>
+            <li class = "active contact_nav"><a href="">Contact</a></li>
+          </ul>          
+        </div>
+      </div>
+      <div id="contact_form">
+        <!-- Do not change code! -->
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td>
+              <iframe width="392" height="440" frameborder="0" src="http://www.foxyform.com/form.php?id=317762&sec_hash=4c2b121f53e">
+              </iframe>
+            </td>
+          </tr>
+        </table>
+        <!-- Do not change code! -->
+      </div>
+      <div class="hero contact_hero">
+        <!-- <div id="contact_banner"></div> -->
+        <div class="hero_inset_grey">
+          <div class="service_list">
+            <h2>Contact</h2>
+            <p>Contact GPM Electric for quotes on electrician work in San Francisco and the Bay Area.  References are gladly provided upon request.</p>
+          </div>
+          <div class="service_description">
+            <div>
+              <div class="image_wrapper">
+                <img src="../img/about.jpg">
+              </div>
+              <!-- <div class="clear"></div> -->
+              <ul class="contact">
+                <h3>GPM Electric</h3>
+                <li>1139 Florida St.</li>
+                <li>San Francisco, CA 94110</li>
+                <li>Ph. 415.425.1497</li>
+                <li>Email: <a href="mailto:garmaher@gmail.com" target="_blank">garmaher@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/cycle_plugin.js"></script>
+     <!-- Javascript / jQuery -->
+    <script>
+      $(document).ready(function(){
+        // This handles the behavior of the side menu and associated service descriptions.
+        $('.service_list ul li').on('click',function(){
+          if ($(this).attr('class') == 'active') {
+            // Does nothing if the button is already active
+          }
+          else {
+            // Remove class of 'active' from other buttons and assign it to this button
+            $('.service_list ul li').each(function(){
+              $(this).removeClass('active')
+            })
+            $(this).addClass('active')
+
+            // 
+            description = '#' + $(this).attr('id') + '_description'
+            $('.service_description div.active').fadeOut(400, function(){
+              $(this).removeClass('active')
+              $(description).fadeIn().addClass('active')
+              // console.log(description)
+            })
+            
+          }
+          
+        })
+      })
+    </script>
+  </body>
+</html>

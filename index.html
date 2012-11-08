@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPM Electric</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class='container'>
+      <!-- <h1 class="main_title">GPM Electric</h1> -->
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="#">GPM Electric</a>
+          <ul class="nav">
+            <li><a href="about">About</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="portfolio">Portfolio</a></li>
+            <li class = "contact_nav"><a href="contact">Contact</a></li>
+          </ul>
+          <!-- <img src="img/lightbulb.png" class="lightbulb"> -->
+        </div>
+      </div>
+      <div class="hero">
+        <!-- <div class="hero_title">
+          <h1>GPM Electric</h1>
+        </div> -->
+        <!-- <img src="img/contact_bulb.png"> -->
+        <!-- <div class="contact_wrapper">
+          <img src="img/lightbulb.png" class="lightbulb">
+        </div> -->
+        <!-- <div id="contact_banner"></div> -->
+        <div id="hero" class="hero_inset">
+
+          <img src="img/hero1.jpg" alt="Hero shot of kitchen." class="hero_image">
+          <img src="img/hero2.jpg" alt="Hero shot of another kitchen." class="hero_image">
+          <!-- <img src="img/Pfullman-After.jpg" alt="We can also put some information here, on this slide." class="hero_image"> -->
+        </div>
+        <div class="caption_wrapper">
+          <img class = "logo" src="img/logo_small.png">
+          <!-- <div class="btn">Contact Us</div> -->
+          <!-- <p id="caption">Contact Us</p> -->
+          <a href="contact"><img src="img/contact_bulb3.png" class="contact_bulb" id="contact_bulb"></a>
+          <a href="contact"><img src="img/contact_bulb4_active.png" class="contact_bulb_active" id="contact_bulb_active"></a>
+        </div>
+      </div>
+      <div class="row index">
+        <div class="span4 index">
+          <h2>Quality</h2>
+          <p>Since 1999, Gareth Maher has provided quality electrical work throughout San Francisco and the Bay Area.</p>
+          <p><a class="btn hero_btn" href="about">Learn More &raquo;</a></p>
+        </div>
+        <div class="span4 index">
+          <h2>Service</h2>
+          <p>GPM Electric offers a wide variety of services, custom-taylored to meet the unique needs of each client.</p>
+          <p><a class="btn hero_btn" href="services">View services &raquo;</a></p>
+       </div>
+        <div class="span4 index">
+          <h2>Experience</h2>
+          <p>With over ten years experience as an electrician in San Francisco, Gareth Maher's work speaks for itself.</p>
+          <p><a class="btn hero_btn" href="portfolio">Explore portfolio &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cycle_plugin.js"></script>
+     <!-- Javascript / jQuery -->
+    <script>
+      $(document).ready(function(){
+        // This initiates the carousel of pictures and controls the timing.
+        $('#hero').cycle({ 
+          fx:     'fade', 
+          speed:  'slow', 
+          timeout: 5000, 
+          // after:     function() {
+          //   $('#caption').html(this.alt);
+          // }
+
+          // next:   '#right_scroll', 
+          // prev:   '#left_scroll' 
+        });
+
+        // This controls the behavior of the lightbulb in the caption area.
+        $('#contact_bulb, #contact_bulb_active').mouseenter(function(){
+          clearInterval(pulseInterval)
+          $(this).stop()
+          // setTimeout(function(){
+          //   $('#contact_bulb_active').fadeTo(1)
+          // }, 1)
+          $('#contact_bulb_active').fadeTo(400, 1)
+        })
+        $('#contact_bulb_active').mouseleave(function(){
+          $(this).fadeOut(function(){
+            pulseInterval = setInterval(pulse, 4000)
+          })
+        })
+
+        // This is the function that makes the lightbulb pulse.
+        function pulse(){
+          $('#contact_bulb_active').fadeTo(1500, .4, function(){
+            $(this).fadeTo(1500, 0)
+          })
+        }
+        // This sets the interval at which the bulb will pulse.
+        var pulseInterval
+        pulseInterval = setInterval(pulse, 4000)
+
+      })
+    </script>
+  </body>
+</html>
+ 

@@ -1,0 +1,37 @@
+.hero_inset_grey .about {
+	padding: 20px;
+}
+
+.about img {
+	float: left;
+	margin-right: 60px;
+	/*border: solid #777 1px;*/
+	border: 1px solid #D4D4D4;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff',endColorstr='#fff2f2f2',GradientType=0);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+.about_Gareth {
+	padding-top: 52px;
+}
+
+.about_Gareth p {
+	font-size: 22px;
+	line-height: 1.2;
+	color: #E08E79;
+}
+
+.qualifications {
+	padding-left: 20px;
+	color: #F5F5F5;
+	text-rendering: optimizelegibility;
+}
+
+.qualifications ul {
+	margin-bottom: 0;
+}

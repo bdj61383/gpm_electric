@@ -1,0 +1,11 @@
+ul.contact {
+	list-style: none;
+}
+
+ul.contact li {
+	margin-left: 250px;
+}
+
+.contact_hero {
+	margin-top: -341px;
+}

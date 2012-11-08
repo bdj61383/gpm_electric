@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPM Electric</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/services.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class='container'>
+      <!-- <h1 class="main_title">GPM Electric</h1> -->
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="../">GPM Electric</a>
+          <ul class="nav">
+            <li><a href="../about">About</a></li>
+            <li class="active"><a href="#">Services</a></li>
+            <li><a href="../portfolio">Portfolio</a></li>
+            <li class = "contact_nav"><a href="../contact">Contact</a></li>
+          </ul>
+          
+        </div>
+      </div>
+      <div class="hero">
+        <!-- <div id="contact_banner"></div> -->
+        <div class="hero_inset_grey">
+          <div class="service_list">
+            <h2>Services</h2>
+            <ul>
+              <li id="residential" class="active">Residential</li>
+              <li id="commercial">Commercial</li>
+              <!-- <li id="industrial">Industrial</li> -->
+            </ul>
+          </div>
+          <div class="service_description">
+            <div id="residential_description" class="active">
+              <div class="image_wrapper">
+                <img src="../img/services_residential.jpg">
+                <p style="padding-top: 70px">"GPM Electric has provided our company with the highest quality of service for the last seven years. Gareth's work is a cut above the rest with extreme etension to detail. He is reliable, trustworthy and honest."<br><small>- Nick Judd</small></p>
+              </div>
+              <!-- <div class="clear"></div> -->
+              <ul>
+                <h3>Residential</h3>
+                <li>New Construction</li>
+                <li>Remodeling</li>
+                <li>Additions</li>
+                <li>Re-wiriing</li>
+                <li>Data and Communication (phone, audio-visual, etc.)</li>
+              </ul>
+            </div>
+            <div id="commercial_description">
+              <div class="image_wrapper">
+                <img src="../img/services_commercial.jpg">
+                <p style="padding-top: 70px">"Gareth has continued to provide us with excellent work on all our jobs. Property owners always comment on his work and personality. We are delighted to have found such a contractor."<br><small>- John Paul Coffey, AMG</small></p>
+              </div>
+              <!-- <div class="clear"></div> -->
+              <ul>
+                <h3>Commercial</h3>
+                <li>New Construction</li>
+                <li>Tenant Improvement</li>
+                <li>Utility Installation</li>
+                <li>Re-wiriing</li>
+                <li>Data and Communication (phone, television, POS, etc.)</li>
+              </ul>
+            </div>
+         <!--    <div id="industrial_description">
+              <div class="image_wrapper">
+                <img src="../img/industrial.png">
+                <p style="padding-top: 70px">"GPM Electric provides a variety of services geared towards the unique needs of industry leaders.  We always know we can count on Gareth."<br><small>- Kenneth L.</small></p>
+              </div>
+              <ul>
+                <h3>Industrial</h3>
+                <li>Ability to monitor cable / busbar joints with pre-set (user definable) alarms</li>
+                <li>Ongoing trend analysis allows detection of problems at an early stage of development</li>
+                <li>Increased device reliability and uptime due to avoided downtime &amp; better maintenance</li>
+                <li>Improved operator and facility safety (Arc Flash)</li>
+                <li>Integrated real-time data to BMS/SCADA: 24&#215;7, 365 days a year</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/cycle_plugin.js"></script>
+     <!-- Javascript / jQuery -->
+    <script>
+      $(document).ready(function(){
+        // This handles the behavior of the side menu and associated service descriptions.
+        $('.service_list ul li').on('click',function(){
+          if ($(this).attr('class') == 'active') {
+            // Does nothing if the button is already active
+          }
+          else {
+            // Remove class of 'active' from other buttons and assign it to this button
+            $('.service_list ul li').each(function(){
+              $(this).removeClass('active')
+            })
+            $(this).addClass('active')
+
+            // 
+            description = '#' + $(this).attr('id') + '_description'
+            $('.service_description div.active').fadeOut(400, function(){
+              $(this).removeClass('active')
+              $(description).fadeIn().addClass('active')
+              // console.log(description)
+            })
+            
+          }
+          
+        })
+      })
+    </script>
+  </body>
+</html>

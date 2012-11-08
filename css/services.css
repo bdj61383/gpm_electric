@@ -1,0 +1,82 @@
+.service_list {
+	float: left;
+	color: #F5F5F5;
+	border-right: solid #777;
+	padding: 40px;
+	height: 420px;
+	margin-right: 40px;
+	width: 122px;
+}
+
+.service_list p{
+	font-size: 11px;
+}
+
+.service_list h2 {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.service_list ul {
+	list-style: none;
+}
+
+.service_list ul li {
+	cursor: pointer;
+	margin-bottom: 24px;
+}
+
+.service_list ul li:hover {
+	list-style: circle;
+	font-weight: bold;
+}
+
+.service_list ul li.active {
+	list-style: circle;
+	font-weight: bold;
+}
+
+#residential_description, #commercial_description, #industrial_description {
+	display: none;
+}
+
+#residential_description.active, #commercial_description.active, #industrial_description.active {
+	display: block;
+} 
+
+.service_description div img {
+	height: 224px;
+	width: 337px;
+	float: left;
+	margin: 58px 40px 40px 0px;
+	border: 1px solid #D4D4D4;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff',endColorstr='#fff2f2f2',GradientType=0);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+.service_description div p {
+	font-size: 22px;
+	line-height: 1.2;
+	color: #E08E79;
+	padding: 53px 40px 0 0;
+}
+
+.service_description div p small {
+	line-height: 2;
+	float: right;
+	margin-right: 40px;
+}
+
+.image_wrapper {
+	height: 315px;
+}
+
+.service_description div ul {
+	color: #F5F5F5;
+	margin-bottom: 0;
+}
